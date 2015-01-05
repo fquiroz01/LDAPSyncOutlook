@@ -24,7 +24,7 @@ For the Outlook Express and the similars the contacts are stored in contacts fol
 | Servidor |  Name or IP for server with LDAP |
 | Base | base of search of LDAP tree, for example dc=mydomain,dc=com or dc=mydomain,dc=local |
 | Directorio | Microsoft Outlook's Folder where the contacts are stored |
-| Avanzado | |
+| <b>Avanzado</b> |
 | Puerto | Port the LDAP server. |
 | Mi servidor requiere autenticacion | Activate when the LDAP server requires validation |
 | Usuario | Name of user to validate for example usuario@mydomain.local or cn=usuario,dc=mydomain,dc=com |
