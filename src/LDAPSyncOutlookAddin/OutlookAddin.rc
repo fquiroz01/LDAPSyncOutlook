@@ -1,0 +1,288 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""OutlookAddin.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,2,0,1
+ PRODUCTVERSION 3,2,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "240a04b0"
+        BEGIN
+            VALUE "CompanyName", "SDG (Software Developers Group)"
+            VALUE "FileDescription", "LDAPSyncOutlook Addin"
+            VALUE "FileVersion", "3, 2, 0, 1"
+            VALUE "InternalName", "OutlookAddin"
+            VALUE "LegalCopyright", "2007 SDG LTDA. Reservados todos los derechos."
+            VALUE "OriginalFilename", "OutlookAddin.DLL"
+            VALUE "ProductName", "LDAPSyncOutlook"
+            VALUE "ProductVersion", "3, 2, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x240a, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_ADDIN               REGISTRY                "Addin.rgs"
+IDR_PROPPAGE            REGISTRY                "PropPage.rgs"
+IDR_PAGE                REGISTRY                "Page.rgs"
+IDR_LITEPAGE            REGISTRY                "LitePage.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "bitmap1.bmp"
+IDB_PROPPAGE            BITMAP                  "proppage.bmp"
+IDB_LITEPAGE            BITMAP                  "litepage.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE DIALOGEX 0, 0, 255, 182
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ENOMBRE,72,90,114,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ESERVIDOR,72,109,114,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Avanzado",IDC_BAVANZADO,195,109,50,14
+    EDITTEXT        IDC_EBASE,72,128,114,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIRECTORIO,72,147,114,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "Explorar",IDC_BEXPLORAR,195,147,50,14
+    DEFPUSHBUTTON   "Agregar",IDC_BACEPTAR,139,165,50,14
+    PUSHBUTTON      "Cancelar",IDC_BCANCELAR,195,165,50,14
+    CONTROL         "",IDC_LSITIOS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,5,6,245,75
+    LTEXT           "Nombre",IDC_STATIC,34,94,26,8
+    LTEXT           "Servidor",IDC_STATIC,34,110,27,8
+    LTEXT           "Base",IDC_STATIC,34,129,17,8
+    LTEXT           "Directorio",IDC_STATIC,34,151,31,8
+    PUSHBUTTON      "Ayuda",IDC_BAYUDA,5,165,50,14
+END
+
+IDD_LITEPAGE DIALOGEX 0, 0, 242, 214
+STYLE DS_SETFONT | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Outlook Addin LitePage",IDC_LABEL,22,57,161,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PROPPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 250
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "OutlookAddin"
+    IDS_TITLEPage           "Title"
+    IDS_HELPFILEPage        "Help File Name"
+    IDS_DOCSTRINGPage       "Your Help String"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Colombia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESO)
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_COLOMBIA
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DADVANCED DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Avanzado"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Puerto",IDC_STATIC,7,7,22,8
+    EDITTEXT        IDC_EPUERTO,61,7,40,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Mi servidor requiere autenticación",IDC_CAUTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,23,123,10
+    LTEXT           "Usuario",IDC_STATIC,7,38,25,8
+    EDITTEXT        IDC_EUSUARIO,61,34,67,14,ES_AUTOHSCROLL
+    LTEXT           "Contraseña",IDC_STATIC,7,56,37,8
+    EDITTEXT        IDC_ECONTRASENA,61,53,67,14,ES_AUTOHSCROLL
+    LTEXT           "Actualizar cada",IDC_STATIC,7,77,50,8
+    EDITTEXT        IDC_EACTUALIZAR,61,74,40,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Minutos",IDC_STATIC,109,78,26,8
+    DEFPUSHBUTTON   "Aceptar",IDOK,129,7,50,16
+    PUSHBUTTON      "Cancelar",IDCANCEL,129,26,50,16
+END
+
+IDD_PROGRESODLG DIALOGEX 0, 0, 186, 102
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Actualizando"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_SPROGRESO,7,7,172,8
+    LTEXT           "Mas",IDC_SMAS,7,15,172,8
+    CONTROL         "",IDC_LERRORES,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,24,172,56
+    CONTROL         "",IDC_PESTADO,"msctls_progress32",WS_BORDER,7,81,172,14
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Acerca de LDAPSyncOutlook"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    RTEXT           "Versión 1.0",IDC_SVERSION,139,20,89,8,SS_NOPREFIX
+    RTEXT           "Copyright (C) 2007",IDC_STATIC,139,34,89,8
+    DEFPUSHBUTTON   "Aceptar",IDOK,178,63,50,16,WS_GROUP
+    PUSHBUTTON      "Ayuda",IDC_BAYUDA,123,63,50,16
+    LTEXT           "Programado por SDG LTDA. Todos los derechos reservados.",IDC_SLINKEX,35,49,193,8
+    ICON            IDI_ICONO,IDC_STATIC,7,7,20,20
+    RTEXT           "LDAPSyncOutlook",IDC_STATIC,93,7,135,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PROGRESODLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICONO               ICON                    "..\\LDAPSyncOutlook\\res\\LDAPSyncOutlook.ico"
+#endif    // Spanish (Colombia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "OutlookAddin.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

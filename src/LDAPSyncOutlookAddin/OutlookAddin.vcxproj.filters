@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2bee77bf-e9a3-4e11-a278-a9e33529943d}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\comun">
+      <UniqueIdentifier>{58d962d5-d193-46d8-80db-2dbb76044fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d527eaef-f162-4b27-b2f4-9fde2c0f824c}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\comun">
+      <UniqueIdentifier>{49de0337-4a5f-44fb-8ee8-d16ec5e1c79a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8b23becd-b2c6-4edc-b7a0-381b4abfbdfd}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Addin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CONTACTO.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactosThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlldatax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LitePage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MAPIPropWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutlookAddin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgresoDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PropPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\AboutDlg.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\ContactoBase.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\Sitio.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\ThreadLDAP.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\AdvancedDlg.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\MyRegKey.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\threadauto.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OutlookAddin.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Addin.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="LitePage.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Page.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PropPage.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="OutlookAddin.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OutlookAddin.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Addin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CONTACTO.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContactosThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LitePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MAPIPropWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgresoDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PropPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\AboutDlg.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\ContactoBase.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\Sitio.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\ThreadLDAP.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\AdvancedDlg.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\MyRegKey.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\ThreadAuto.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\JLDAP\res\JLDAP.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="litepage.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="proppage.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\LDAPSyncOutlook\res\LDAPSyncOutlook.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="dlldatax.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

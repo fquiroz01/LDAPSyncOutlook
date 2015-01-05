@@ -1,0 +1,81 @@
+// OutlookAddin.idl : IDL source for OutlookAddin.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (OutlookAddin.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	[
+		object,
+		uuid(F8608145-BB5A-4A5A-AE7E-244C6E028093),
+		dual,
+		helpstring("IAddin Interface"),
+		pointer_default(unique)
+	]
+	interface IAddin : IDispatch
+	{
+	};
+	
+
+	[
+		object,
+		uuid(C76C5E4D-FDFF-4756-B925-B29817CE6288),
+		dual,
+		helpstring("IPropPage Interface"),
+		pointer_default(unique)
+	]
+	interface IPropPage : IDispatch
+	{
+	};
+	
+
+	[
+		object,
+		uuid(067CA4E2-556E-47DD-9EFA-ADAABB2C0D95),
+		dual,
+		helpstring("ILitePage Interface"),
+		pointer_default(unique)
+	]
+	interface ILitePage : IDispatch
+	{
+	};
+
+[
+	uuid(EDDBDEA4-5C07-453F-BE8C-81D738984381),
+	version(1.0),
+	helpstring("OutlookAddin 1.0 Type Library")
+]
+library OUTLOOKADDINLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(C704648D-6030-47E9-ADBA-1E13B6A784AE),
+		helpstring("LDAPSyncOutlook Class")
+	]
+	coclass Addin
+	{
+		[default] interface IAddin;
+	};
+	[
+		uuid(BE1A7148-9F02-40F9-AB5A-5AD4E7D11E62),
+		helpstring("LDAPSyncOutlookPropPage Class")
+	]
+	coclass PropPage
+	{
+		[default] interface IPropPage;
+	};
+
+	
+	[
+		uuid(21881BCB-9F1E-42CE-BD5B-ED0E13379A54),
+		helpstring("LitePage Class")
+	]
+	coclass LitePage
+	{
+		[default] interface ILitePage;
+	};
+};

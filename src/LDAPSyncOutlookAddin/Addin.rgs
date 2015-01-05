@@ -1,0 +1,53 @@
+HKCR
+{
+	LDAPSyncOutlookAddin.Addin.1 = s 'LDAPSyncOutlook Class'
+	{
+		CLSID = s '{C704648D-6030-47E9-ADBA-1E13B6A784AE}'
+	}
+	LDAPSyncOutlookAddin.Addin = s 'LDAPSyncOutlook Class'
+	{
+		CLSID = s '{C704648D-6030-47E9-ADBA-1E13B6A784AE}'
+		CurVer = s 'LDAPSyncOutlookAddin.Addin.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C704648D-6030-47E9-ADBA-1E13B6A784AE} = s 'LDAPSyncOutlook Class'
+		{
+			ProgID = s 'LDAPSyncOutlookAddin.Addin.1'
+			VersionIndependentProgID = s 'LDAPSyncOutlookAddin.Addin'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{EDDBDEA4-5C07-453F-BE8C-81D738984381}'
+		}
+	}
+}
+
+HKLM
+{
+  	Software
+	{
+		Microsoft
+		{
+			Office
+			{
+				Outlook
+				{
+					Addins
+					{
+						'LDAPSyncOutlookAddin.Addin'
+						{
+							val FriendlyName = s 'LDAPSyncOutlook Addin'
+							val Description = s 'Addin para sincronizar contactos entre Outlook y LDAP'
+							val LoadBehavior = d '00000003'
+							val CommandLineSafe = d '00000000' 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

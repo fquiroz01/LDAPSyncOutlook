@@ -73,3 +73,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# codigo intermedio
+obj/
+# base de datos de intellisense
+*.sdf
+# ipch
+ipch/

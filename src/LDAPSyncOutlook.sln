@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LDAPSyncOutlook", "LDAPSyncOutlook\LDAPSyncOutlook.vcxproj", "{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB} = {8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OutlookAddin", "LDAPSyncOutlookAddin\OutlookAddin.vcxproj", "{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release MinDependency|Win32 = Release MinDependency|Win32
+		Release|Win32 = Release|Win32
+		Unicode Debug|Win32 = Unicode Debug|Win32
+		Unicode Release MinDependency|Win32 = Unicode Release MinDependency|Win32
+		Unicode Release MinSize|Win32 = Unicode Release MinSize|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Debug|Win32.Build.0 = Debug|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Release MinDependency|Win32.ActiveCfg = Release|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Release MinDependency|Win32.Build.0 = Release|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Release|Win32.ActiveCfg = Release|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Release|Win32.Build.0 = Release|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Unicode Debug|Win32.ActiveCfg = Debug|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Unicode Debug|Win32.Build.0 = Debug|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Unicode Release MinDependency|Win32.ActiveCfg = Release|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Unicode Release MinDependency|Win32.Build.0 = Release|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Unicode Release MinSize|Win32.ActiveCfg = Release|Win32
+		{7C6129B7-D9F9-4357-B0FF-5A24B9E2EAE7}.Unicode Release MinSize|Win32.Build.0 = Release|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Debug|Win32.Build.0 = Debug|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Release MinDependency|Win32.ActiveCfg = Release MinDependency|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Release MinDependency|Win32.Build.0 = Release MinDependency|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Release|Win32.ActiveCfg = Release|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Release|Win32.Build.0 = Release|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Unicode Release MinDependency|Win32.ActiveCfg = Unicode Release MinDependency|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Unicode Release MinDependency|Win32.Build.0 = Unicode Release MinDependency|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Unicode Release MinSize|Win32.ActiveCfg = Unicode Release MinSize|Win32
+		{8CA76A7E-9ED4-4D82-A4C3-EE835A5344DB}.Unicode Release MinSize|Win32.Build.0 = Unicode Release MinSize|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

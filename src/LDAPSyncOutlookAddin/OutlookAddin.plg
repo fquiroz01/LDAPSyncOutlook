@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: OutlookAddin - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\amit\LOCALS~1\Temp\RSP164.tmp" with contents
+[
+/nologo /MT /W3 /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/OutlookAddin.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"C:\CODE\OFFICEADDIN\OutlookAddin\Addin.cpp"
+"C:\CODE\OFFICEADDIN\OutlookAddin\LitePage.cpp"
+"C:\CODE\OFFICEADDIN\OutlookAddin\OutlookAddin.cpp"
+"C:\CODE\OFFICEADDIN\OutlookAddin\PropPage.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\amit\LOCALS~1\Temp\RSP164.tmp" 
+Creating temporary file "C:\DOCUME~1\amit\LOCALS~1\Temp\RSP165.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/OutlookAddin.pdb" /machine:I386 /def:".\OutlookAddin.def" /out:"ReleaseMinSize/OutlookAddin.dll" /implib:"ReleaseMinSize/OutlookAddin.lib" 
+.\ReleaseMinSize\Addin.obj
+.\ReleaseMinSize\LitePage.obj
+.\ReleaseMinSize\OutlookAddin.obj
+.\ReleaseMinSize\PropPage.obj
+.\ReleaseMinSize\StdAfx.obj
+.\ReleaseMinSize\OutlookAddin.res
+]
+Creating command line "link.exe @C:\DOCUME~1\amit\LOCALS~1\Temp\RSP165.tmp"
+Creating temporary file "C:\DOCUME~1\amit\LOCALS~1\Temp\RSP166.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\OutlookAddin.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\amit\LOCALS~1\Temp\RSP166.bat"
+Compiling...
+Addin.cpp
+LitePage.cpp
+OutlookAddin.cpp
+PropPage.cpp
+Generating Code...
+Linking...
+   Creating library ReleaseMinSize/OutlookAddin.lib and object ReleaseMinSize/OutlookAddin.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+OutlookAddin.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

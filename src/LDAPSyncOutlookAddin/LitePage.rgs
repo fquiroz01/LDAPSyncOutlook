@@ -1,0 +1,33 @@
+HKCR
+{
+	OutlookAddin.LitePage.1 = s 'LitePage Class'
+	{
+		CLSID = s '{21881BCB-9F1E-42CE-BD5B-ED0E13379A54}'
+	}
+	OutlookAddin.LitePage = s 'LitePage Class'
+	{
+		CLSID = s '{21881BCB-9F1E-42CE-BD5B-ED0E13379A54}'
+		CurVer = s 'OutlookAddin.LitePage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {21881BCB-9F1E-42CE-BD5B-ED0E13379A54} = s 'LitePage Class'
+		{
+			ProgID = s 'OutlookAddin.LitePage.1'
+			VersionIndependentProgID = s 'OutlookAddin.LitePage'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 110'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{EDDBDEA4-5C07-453F-BE8C-81D738984381}'
+			'Version' = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\comun">
+      <UniqueIdentifier>{2e79f650-761e-49fc-bf6f-3454574fa2b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\comun">
+      <UniqueIdentifier>{9c541622-403f-4f19-8cb6-9de11b73b723}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LDAPSyncOutlook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LDAPSyncOutlookDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadOutlook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContactoOutlook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="akTrayIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\AboutDlg.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\ContactoBase.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\MyRegKey.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\ThreadAuto.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\ThreadLDAP.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\Sitio.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+    <ClInclude Include="..\comun\AdvancedDlg.h">
+      <Filter>Header Files\comun</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LDAPSyncOutlook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LDAPSyncOutlookDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadOutlook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactoOutlook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="akTrayIcon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\Sitio.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\threadauto.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\ThreadLDAP.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\MyRegKey.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\ContactoBase.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\AboutDlg.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+    <ClCompile Include="..\comun\AdvancedDlg.cpp">
+      <Filter>Source Files\comun</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LDAPSyncOutlook.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\LDAPSyncOutlook.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\LDAPSyncOutlook.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
