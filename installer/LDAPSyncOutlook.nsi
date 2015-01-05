@@ -246,7 +246,8 @@ FunctionEnd
 Section Uninstall
 
   ExecWait  "$INSTDIR\LDAPSyncOutlook\LDAPSyncOutlook.exe -close"
-  
+  UnRegDLL "$INSTDIR\LDAPSyncOutlook\LDAPSyncOutlookAddin.dll"
+
   Delete "$INSTDIR\LDAPSyncOutlookU.exe"
   RMDir "$INSTDIR"
 

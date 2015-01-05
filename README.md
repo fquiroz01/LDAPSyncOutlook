@@ -1,6 +1,5 @@
-LDAPSyncOutlook
+﻿LDAPSyncOutlook
 ===============
-
 Sync server LDAP contacts with Outlook persistent. OpenLDAP, Active Directory, etc. Compatible with Microsoft Outlook, Outlook Express, Windows Mail and Windows Live Mail.
 
 Office Version compatible
