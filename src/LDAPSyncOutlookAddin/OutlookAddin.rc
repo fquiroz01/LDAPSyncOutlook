@@ -208,7 +208,6 @@ CAPTION "Actualizando"
 FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     LTEXT           "",IDC_SPROGRESO,7,7,172,8
-    LTEXT           "Mas",IDC_SMAS,7,15,172,8
     CONTROL         "",IDC_LERRORES,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,24,172,56
     CONTROL         "",IDC_PESTADO,"msctls_progress32",WS_BORDER,7,81,172,14
 END

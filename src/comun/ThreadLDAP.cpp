@@ -65,8 +65,9 @@ bool CThreadLDAP::GetLDAP(CSitio *sitio) {
 		SetMensaje(L"Error Conectando con el servidor LDAP",sitio);
 		return false;
 	}
+	SetMensaje(L"Iniciando busqueda (&(|(objectclass=group)(objectclass=person))(mail=*))");
 	// buscamos solo los que tengan el atributo mail
-	if ((lres = ldap_search(m_ld, (const PTCHAR)(const wchar_t *)sitio->m_szBase, LDAP_SCOPE_SUBTREE, _T("(&(objectclass=person)(mail=*))"),
+	if ((lres = ldap_search(m_ld, (const PTCHAR)(const wchar_t *)sitio->m_szBase, LDAP_SCOPE_SUBTREE, _T("(&(|(objectclass=group)(objectclass=person))(mail=*))"),
 		NULL, FALSE)) == -1 )
 	{
 		SetMensaje(ldap_err2string( lres),sitio);

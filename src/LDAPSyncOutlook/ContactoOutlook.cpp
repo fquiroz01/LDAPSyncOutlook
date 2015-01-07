@@ -21,7 +21,7 @@ void CContactoOutlook::FillContacto(LPSPropValue row) {
 	SetValue(&row[0], m_szEmail, PR_EMAIL_ADDRESS);
 	SetValue(&row[1], m_szTipo,PR_ADDRTYPE );
 	SetValue(&row[2],m_szApellido ,PR_SURNAME );
-	SetValue(&row[3], m_szNombre, PR_GIVEN_NAME);
+	SetValue(&row[3], m_szNombre.IsEmpty() ? m_szNombreParaMostrar : m_szNombre, PR_GIVEN_NAME);
 	SetValue(&row[4],m_szOrganization ,PR_COMPANY_NAME );
 	SetValue(&row[5],m_szDescripcion ,PR_BUSINESS_ADDRESS_STREET );
 	SetValue(&row[6], m_szCiudad, PR_BUSINESS_ADDRESS_CITY);
@@ -36,15 +36,16 @@ void CContactoOutlook::FillContacto(LPSPropValue row) {
 
 CContactoOutlook *CContactoOutlook::Actualizar(LPSPropValue row, int crows) {
 
-	if( !row || crows<15)
+	if( !row || crows<16)
 		return NULL;
-	CContactoOutlook *info= FindByID(row[1].Value.bin.lpb,row[1].Value.bin.cb,row[0].Value.lpszW);
+	CString nombreCompleto(row[0].Value.lpszA);
+	CContactoOutlook *info= FindByID(row[1].Value.bin.lpb,row[1].Value.bin.cb,nombreCompleto);
 
 	if( info) {		
-		info->SetValue(info->m_szNombreCompleto, row, crows, 0);
+		// info->SetValue(info->m_szNombreCompleto, row, crows, 0);
 		info->SetValue(info->m_szEmail, row, crows, 3);
-		info->SetValue(info->m_szNombre, row, crows, 4);
-		info->SetValue(info->m_szApellido, row, crows, 5);
+		/*info->SetValue(info->m_szNombre, row, crows, 4);
+		info->SetValue(info->m_szApellido, row, crows, 5);*/
 		info->SetValue(info->m_szOrganization, row, crows, 6);
 		info->SetValue(info->m_szDescripcion, row, crows, 7);
 		info->SetValue(info->m_szCiudad, row, crows, 8);
@@ -75,7 +76,7 @@ CContactoOutlook *CContactoOutlook::FindByID(BYTE *id, int countid, const CStrin
 			if(found)
 				return info;
 		}
-		if( info->m_szNombreCompleto.CompareNoCase(nombrecompleto)==0) {
+		if (info->GetNombreCompleto().CompareNoCase(nombrecompleto) == 0) {
 			info->m_nBytes= countid;
 			if( info->m_pByte)
 				delete []info->m_pByte;
@@ -104,7 +105,7 @@ void CContactoOutlook::SetValue(CString &actual, LPSPropValue row, int crows, in
 	if(PROP_TYPE(row[pos].ulPropTag)!=PT_STRING8)
 		return;
 
-	CString szNuevo= row[pos].Value.lpszW;
+	CString szNuevo(row[pos].Value.lpszA);
 	if(actual.IsEmpty() && szNuevo.IsEmpty())
 		return;
 	if(actual==szNuevo)

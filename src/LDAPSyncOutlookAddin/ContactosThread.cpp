@@ -76,6 +76,8 @@ bool CContactosThread::Init() {
 			dlg->m_PEstado.SetRange(0, m_pContactos.GetCount());
 			if(!IsRunning())
 				goto fin;
+
+			SetMensaje(L"Cargando libreta de direcciones");
 			try
 			{
 				if (CAddin::m_fVersion >= 15) { // outlook 2013 no admite llamadas desde hilos
@@ -117,12 +119,12 @@ bool CContactosThread::Init() {
 					info= ((CContacto *)&m_pContactos)->Actualizar(pContact, &m_pWrapper);
 					if( info && info->m_nEstado==info->modificado) {
 						actualizados++;
-						temp.Format(L"Actualizando a %ls %ls", info->m_szNombre, info->m_szApellido);
+						temp.Format(L"Actualizando a %ls", info->GetNombreCompleto());
 						SetMensaje(temp, sitio);
 						dlg->m_SEstado.SetWindowText(temp);
 						info->Modificar(pContact, &m_pWrapper);
 					} else if(info) {
-						temp.Format(L"Omitiendo a %ls %ls", info->m_szNombre, info->m_szApellido);
+						temp.Format(L"Omitiendo a %ls", info->GetNombreCompleto());
 						if(info->m_nEstado!=CContacto::eliminado) 
 							info->m_nEstado= CContacto::guardado;
 					}
@@ -146,7 +148,7 @@ bool CContactosThread::Init() {
 							break;
 						case CContacto::eliminado:
 							eliminados++;
-							temp.Format(L"Eliminando a %ls %ls", info->m_szNombre, info->m_szApellido);
+							temp.Format(L"Eliminando a %ls", info->GetNombreCompleto());
 							dlg->m_SEstado.SetWindowText(temp);
 							SetMensaje(temp, sitio);
 							info->DeleteContacto(pItems, sitio->m_szNombre, &m_pWrapper);
@@ -155,7 +157,7 @@ bool CContactosThread::Init() {
 							{
 								nuevos++;
 								CComVariant tipo(OlItemType::olContactItem);
-								temp.Format(L"Agregando a %ls %ls", info->m_szNombre, info->m_szApellido);
+								temp.Format(L"Agregando a %ls", info->GetNombreCompleto());
 								SetMensaje(temp, sitio);
 								dlg->m_SEstado.SetWindowText(temp);
 								info->Modificar(pItems->Add(tipo), &m_pWrapper);

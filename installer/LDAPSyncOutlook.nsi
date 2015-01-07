@@ -180,7 +180,7 @@ Section "-hidden Común" SEC03
   SetOutPath "$INSTDIR\LDAPSyncOutlook"
 SectionEnd
 
-Section "Outlook Express" SEC01
+Section "Contactos de Windows" SEC01
 
   SetOutPath "$INSTDIR\LDAPSyncOutlook"
   SetOverwrite on
@@ -229,8 +229,8 @@ SectionEnd
 ; Section descriptions
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${SEC03} "Librerias comunes"
-  !insertmacro MUI_DESCRIPTION_TEXT ${SEC02} "Compatibilidad con Microsoft Outlook"
-  !insertmacro MUI_DESCRIPTION_TEXT ${SEC01} "Compatibilidad con Outlook Express"
+  !insertmacro MUI_DESCRIPTION_TEXT ${SEC02} "Compatible con Microsoft Outlook 2000, Microsoft Outlook XP, Microsoft Outlook 2003, Microsoft Outlook 2007, Microsoft Outlook 2010, Microsoft Outlook 2013."
+  !insertmacro MUI_DESCRIPTION_TEXT ${SEC01} "Compatible con Windows XP, Windows Vista, Windows 7, Windows 8."
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 Function un.onUninstSuccess

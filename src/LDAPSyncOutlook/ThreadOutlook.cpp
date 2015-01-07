@@ -205,6 +205,7 @@ bool CThreadOutlook::Init() {
 			if(!IsRunning())
 				goto fin;
 
+			SetMensaje(L"Cargando libreta de direcciones", sitio);
 			if(SUCCEEDED(LoadWABContents())) {
 
 				if(!IsRunning())
@@ -221,18 +222,18 @@ bool CThreadOutlook::Init() {
 					CContactoOutlook *info= (CContactoOutlook *)m_pContactos.GetAt(i);
 					switch( info->m_nEstado) {
 						case CContactoBase::eliminado: // eliminar
-							texto.Format(L"Eliminando a %ls %ls", info->m_szNombre, info->m_szApellido);
+							texto.Format(L"Eliminando a %ls", info->GetNombreCompleto());
 							SetMensaje(texto,sitio);
 							Borrar(info, sitio->m_szNombre);
 							break;
 						case CContactoBase::modificado: // modificar
-							texto.Format(L"Actualizando a %ls %ls", info->m_szNombre, info->m_szApellido);
+							texto.Format(L"Actualizando a %ls", info->GetNombreCompleto());
 							SetMensaje(texto,sitio);
 							Borrar(info);
 							Adicionar(info);
 							break;
 						case CContactoBase::nuevo: // agregar
-							texto.Format(L"Agregando a %ls %ls", info->m_szNombre, info->m_szApellido);
+							texto.Format(L"Agregando a %ls", info->GetNombreCompleto());
 							SetMensaje(texto,sitio);
 							Adicionar(info);
 							break;
@@ -603,6 +604,7 @@ HRESULT CThreadOutlook::Adicionar( CContactoOutlook *info) { // const char * ema
 
 		// Explictly save the changes to the new entry.
 		hr = lpNewEntry->SaveChanges(NULL);
+
 		if (MAPI_E_COLLISION == hr)
 
 			return hr;

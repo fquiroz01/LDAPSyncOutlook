@@ -138,8 +138,6 @@ BOOL CLDAPSyncOutlookDlg::OnInitDialog()
 	m_TrayIcon.SetIconAndTip(LoadIcon(AfxGetInstanceHandle(), MAKEINTRESOURCE(IDR_MAINFRAME)), _T("SDG - LDAPSyncOutlook"));
 	m_TrayIcon.Hide();
 
-	Update(0);
-	Update(1);
 	CString cmdline = AfxGetApp()->m_lpCmdLine;
 
 	if (cmdline.Find(L"-start") != -1)
@@ -457,7 +455,8 @@ void CLDAPSyncOutlookDlg::OnDestroy()
 	KillTimer(2);
 	m_TrayIcon.Hide();
 
-	m_pThread->Kill(false);
+	if (m_pThread)
+		m_pThread->Kill();
 	CSitio *info;
 	for (int i = 0; i<m_LCSitios.GetItemCount(); i++) {
 

@@ -34,6 +34,8 @@ void CContacto::Modificar(_ContactItemPtr pContact, CMAPIPropWrapper *wrapper) {
 		pContact->put_PagerNumber((_bstr_t)m_szBeeper);
 		pContact->put_MobileTelephoneNumber((_bstr_t)m_szCelular);
 		pContact->put_HomeTelephoneNumber((_bstr_t) m_szTelefonoCasa);
+		if (m_szApellido.IsEmpty() && m_szNombre.IsEmpty())
+			pContact->put_FullName((_bstr_t)m_szNombreParaMostrar);
 
 		pContact->Save();
 
@@ -116,10 +118,11 @@ CContacto *CContacto::Actualizar(_ContactItemPtr pContact, CMAPIPropWrapper *wra
 		CContacto *info= FindById(id,resultado);
 		if( info) {
 
-			CString temp= pContact->GetFirstName().GetBSTR();
+			CString temp;
+			/*temp= pContact->GetFirstName().GetBSTR();
 			info->SetValue(temp, info->m_szNombre);
 			temp= pContact->GetLastName().GetBSTR();
-			info->SetValue(temp, info->m_szApellido);
+			info->SetValue(temp, info->m_szApellido);*/
 			temp= pContact->GetCompanyName().GetBSTR();
 			info->SetValue(temp, info->m_szOrganization);
 			temp= pContact->GetBusinessAddressStreet().GetBSTR();
@@ -140,6 +143,8 @@ CContacto *CContacto::Actualizar(_ContactItemPtr pContact, CMAPIPropWrapper *wra
 			info->SetValue(temp, info->m_szCelular);
 			temp= pContact->GetHomeTelephoneNumber().GetBSTR();
 			info->SetValue(temp, info->m_szTelefonoCasa);
+			/*temp = pContact->GetFullName().GetBSTR();
+			info->SetValue(temp, info->m_szNombreParaMostrar);*/
 			// el correo toca revisarlos con el safeemail para evitar letrero lata.
 			info->SetValue(GetSafeEmail(pContact, wrapper, info->m_szEmail), info->m_szEmail);
 		}

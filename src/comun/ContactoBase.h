@@ -34,6 +34,7 @@ public:
 	CString m_szBeeper;
 	CString m_szCelular;
 	CString m_szTelefonoCasa;
+	CString m_szNombreParaMostrar;
 
 	CString	m_szTipo;
 	CString	m_szID;
@@ -52,4 +53,5 @@ public:
 	void ResetContent();
 	void Update(const CString &sitio, bool validate);
 	int CargarTodo(CString sitio);
+	CString GetNombreCompleto();
 };

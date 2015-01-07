@@ -111,6 +111,7 @@ void CContactoBase::ResetContent() {
 	m_szTelefonoCasa.Empty();
 	m_lpDireccion= NULL;
 	m_szID.Empty();
+	m_szNombreParaMostrar.Empty();
 	if( m_pSig) {
 
 		delete m_pSig;
@@ -136,7 +137,11 @@ void CContactoBase::Update(const CString &sitio, bool validate) {
 	SetValue(m_szBeeper, key.GetString(todo, L"pager", L""));
 	SetValue(m_szCelular, key.GetString(todo, L"mobile", L""));
 	SetValue(m_szTelefonoCasa, key.GetString(todo, L"homePhone", L""));
-	SetValue(m_szNombreCompleto, m_szNombre + L" " + m_szApellido);
+	m_szNombreCompleto = m_szNombre + L" " + m_szApellido;
+	if (m_szNombreParaMostrar.IsEmpty())
+		m_szNombreParaMostrar = m_szNombre + L" " + m_szApellido;
+	m_szNombreParaMostrar = key.GetString(todo, L"name", L"");
+	// SetValue(m_szNombreParaMostrar, key.GetString(todo, L"name", L""));
 	SetValue(m_szID, key.GetString(todo, L"idmoutlook"));
 
 	if(m_pByte)
@@ -165,3 +170,7 @@ int CContactoBase::CargarTodo(CString sitio) {
 	return GetCount();
 }
 
+CString CContactoBase::GetNombreCompleto() {
+
+	return m_szNombre.IsEmpty() ? m_szNombreParaMostrar : m_szNombreCompleto;
+}
